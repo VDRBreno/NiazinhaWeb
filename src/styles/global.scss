@@ -1,0 +1,47 @@
+$Screen_Max_Width: 1500px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font: 400 16px 'Inter', sans-serif;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #281536, #0A031F);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  &.modal-overflow-hidden,
+  &.sidemenu-overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+body, input, button, textarea, select, a {
+  color: #FFFFFF;
+  font: 400 16px 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #0A031F;
+}
+::-webkit-scrollbar-thumb {
+  background: #4D0186;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #340A54;
+  cursor: pointer;
+}

@@ -9,12 +9,12 @@ type ILangKeysWithNullable = {
 
 export default function verifyLang(data: ILangKeysWithNullable) {
 
-  const key = Object.keys(data)[0];
+  const key = Object.keys(data)[0] as ILangKeys;
   const lang = Object.values(data)[0];
 
   try {
 
-    const langFixed = fixLang(lang);
+    const langFixed = fixLang(lang, key);
     console.log(`[${colorout.fg.cyan}CHECK${colorout.reset}] Lang ( ${key} ) `);
     return langFixed;
 
@@ -27,14 +27,16 @@ export default function verifyLang(data: ILangKeysWithNullable) {
 
 }
 
-export function fixLang(lang: Record<string, string>) {
+export function fixLang(lang: Record<string, string>, langKey: ILangKeys) {
 
   let langFixed: Record<string, string> = {};
 
   const DefaultLangKeys = Object.keys(DefaultLang) as (keyof typeof DefaultLang)[];
 
   for(const key of DefaultLangKeys) {
-    if(!lang[key]) {
+    if(key==='LangKey') {
+      langFixed[key] = langKey;
+    } else if(!lang[key]) {
       langFixed[key] = DefaultLang[key];
     } else {
       langFixed[key] = lang[key];

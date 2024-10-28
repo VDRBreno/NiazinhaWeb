@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useEffect, useState } from 'react';
 
 import { DefaultLang, DefaultLangKey, getLang, getLangKey, ILangKeys, ILangType, LANG_STORE_KEY } from '@/i18n';
+import Loading from '@/layouts/Loading';
 
 interface LangContextProps {
   Lang: ILangType;
@@ -22,7 +23,7 @@ export default function LangProvider({
   
   const [LangKey, setLangKey] = useState<ILangKeys>(getLangKeyByPath());
   const [Lang, setLang] = useState<ILangType>(DefaultLang);
-  const [isLangLoading, setIsLangLoading] = useState(true);
+  const [firstLangLoading, setFirstLangLoading] = useState(true);
 
   function getLangKeyByPath() {
     const storedLangKey = localStorage.getItem(LANG_STORE_KEY);
@@ -54,17 +55,19 @@ export default function LangProvider({
 
   async function changeLang(langKey: ILangKeys) {
     if(LangKey===langKey && langKey===DefaultLangKey) {
-      setIsLangLoading(false);
+      setFirstLangLoading(false);
       return;
     }
     
+
     setLang(await getLang(langKey));
     if(langKey!==LangKey)
       setLangKey(langKey);
 
     const newURL = parseCurrentLocationURL(langKey);
 
-    setIsLangLoading(false);
+    if(firstLangLoading)
+      setFirstLangLoading(false);
 
     return newURL;
   }
@@ -91,7 +94,7 @@ export default function LangProvider({
       parseLocationURL,
       parseCurrentLocationURL
     }}>
-      {isLangLoading ?<span>Loading Lang..</span> :children}
+      {firstLangLoading ?<Loading message='Loading Lang..' /> :children}
     </LangContext.Provider>
   );
 }

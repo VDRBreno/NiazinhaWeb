@@ -1,8 +1,10 @@
 import { createElement, lazy, Suspense } from 'react';
+
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import useLang from '@/hooks/useLang';
 import { LangChoices } from '@/i18n';
+import Loading from '@/layouts/Loading';
 const Home = lazy(() => import('@/pages/Home'));
 
 export default function Router() {
@@ -27,8 +29,7 @@ export default function Router() {
 
 function LazyPage({ component }: { component: React.LazyExoticComponent<() => JSX.Element>; }) {
   return (
-    // <Suspense fallback={<LoadingScreen />}>
-    <Suspense fallback={<div>loading screen..</div>}>
+    <Suspense fallback={<Loading message='Loading Screen..' />}>
       {createElement(component)}
     </Suspense>
   );

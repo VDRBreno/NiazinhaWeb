@@ -1,0 +1,48 @@
+#Container {
+  @keyframes loadingAnimation {
+    0% {
+      rotate: 0deg;
+      border-top-color: transparent;
+      border-right-color: #FFF;
+      border-bottom-color: transparent;
+      border-left-color: #FFF;
+    }
+  
+    25% {
+      rotate: 360deg;
+      border-top-color: #FFF;
+      border-right-color: transparent;
+      border-bottom-color: #FFF;
+      border-left-color: transparent;
+    }
+  
+    50% {
+      rotate: 180deg;
+      border-top-color: transparent;
+      border-right-color: #FFF;
+      border-bottom-color: transparent;
+      border-left-color: #FFF;
+    }
+  
+    75% {
+      rotate: 180deg;
+      border-top-color: #FFF;
+      border-right-color: transparent;
+      border-bottom-color: #FFF;
+      border-left-color: transparent;
+    }
+  
+    100% {
+      rotate: 360deg;
+      border-top-color: transparent;
+      border-right-color: #FFF;
+      border-bottom-color: transparent;
+      border-left-color: #FFF;
+    }
+  }
+
+  & {
+    animation: infinite loadingAnimation 4s;
+    border-width: 2px;
+  }
+}

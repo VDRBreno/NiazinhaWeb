@@ -1,6 +1,8 @@
-import api from '@/services/api';
 import { AxiosError } from 'axios';
 import { v4 as uuid } from 'uuid';
+
+import api from '@/services/api';
+import colorout from '@/utils/colorout';
 
 export class FormattedError {
 
@@ -31,13 +33,13 @@ export default async function HandleError({
     `location: ${window.location.href}`
   ].join('\n');
 
-  console.log('');
+  console.log(colorout('fg.red', 'HandleError\n'));
   if(error instanceof FormattedError) {
 
-    console.error(`[FORMATTED ERROR]`);
-    console.log('[DESCRIPTION]');
+    console.error(colorout('fg.red', 'FORMATTED ERROR'));
+    console.log(colorout('fg.red', 'DESCRIPTION'));
     console.log(error.description);
-    console.log('[ERROR]');
+    console.log(colorout('fg.red', 'ERROR'));
     console.log(error.error);
 
     const stringError = stringifyError({ error: error.error });
@@ -54,10 +56,10 @@ export default async function HandleError({
 
   } else if(error instanceof AxiosError) {
 
-    console.error('[AXIOS ERROR]');
-    console.log('[MESSAGE]');
+    console.error(colorout('fg.red', 'AXIOS ERROR'));
+    console.log(colorout('fg.red', 'MESSAGE'));
     console.log(error.message);
-    console.log('[ERROR]');
+    console.log(colorout('fg.red', 'ERROR'));
     console.log(error);
 
     const stringError = stringifyError({ error });
@@ -80,10 +82,10 @@ export default async function HandleError({
 
   } else if (error instanceof Error) {
 
-    console.error('[INSTANCE ERROR]');
-    console.log('[MESSAGE]');
+    console.error(colorout('fg.red', 'INSTANCE ERROR'));
+    console.log(colorout('fg.red', 'MESSAGE'));
     console.log(error.message);
-    console.log('[ERROR]');
+    console.log(colorout('fg.red', 'ERROR'));
     console.log(error);
 
     const stringError = stringifyError({ error });
@@ -104,8 +106,8 @@ export default async function HandleError({
 
   } else {
 
-    console.error('[ANY ERROR]');
-    console.log('[ERROR]');
+    console.error(colorout('fg.red', 'ANY ERROR'));
+    console.log(colorout('fg.red', 'ERROR'));
     console.log(error);
 
     const stringError = stringifyError({ error });

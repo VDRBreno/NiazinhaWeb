@@ -15,7 +15,7 @@ export default function verifyLang(data: ILangKeysWithNullable) {
   try {
 
     const langFixed = fixLang(lang, key);
-    console.log(`[${colorout.fg.cyan}CHECK${colorout.reset}] Lang ( ${key} ) `);
+    console.log(`[${colorout('fg.cyan', 'CHECK')}] Lang ( ${key} ) `);
     return langFixed;
 
   } catch(error) {

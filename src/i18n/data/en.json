@@ -1,5 +1,9 @@
 {
   "LangKey": "en",
 
+  "ErrorScreen.Title": "Sorry for what happened, an unknown error occurred, you can report that on our Discord Server",
+  "ErrorScreen.MessageTitle": "Message",
+  "ErrorScreen.ErrorTitle": "Error",
+
   "Home.Title": "Teste"
 }

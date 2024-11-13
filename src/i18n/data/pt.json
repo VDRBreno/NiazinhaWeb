@@ -1,3 +1,8 @@
 {
+  "ErrorScreen.Title": "Um erro inesperado aconteceu, você pode reportá-lo em nosso servidor Discord",
+  
+  "ErrorScreen.MessageTitle": "Mensagem",
+  "ErrorScreen.ErrorTitle": "Erro",
+
   "Home.Title": "PT TEST"
 }

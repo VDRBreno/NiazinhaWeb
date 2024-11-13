@@ -1,0 +1,40 @@
+#Container {
+  & {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  .Title {
+    font-size: 1.2rem;
+  }
+
+  .ErrorContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+
+  .ErrorTitle {
+    font-weight: 600;
+    color: #FF4444;
+  }
+
+  .ErrorDescription {
+    font-family: 'JetBrains-Mono';
+    font-weight: 500;
+    color: #DEDEDE;
+  }
+}

@@ -33,10 +33,10 @@ export default async function HandleError({
     `location: ${window.location.href}`
   ].join('\n');
 
-  console.log(colorout('fg.red', 'HandleError\n'));
+  console.log(colorout('fg.red', 'HandleError'));
   if(error instanceof FormattedError) {
 
-    console.error(colorout('fg.red', 'FORMATTED ERROR'));
+    console.log(colorout('fg.red', 'FORMATTED ERROR'));
     console.log(colorout('fg.red', 'DESCRIPTION'));
     console.log(error.description);
     console.log(colorout('fg.red', 'ERROR'));
@@ -56,7 +56,7 @@ export default async function HandleError({
 
   } else if(error instanceof AxiosError) {
 
-    console.error(colorout('fg.red', 'AXIOS ERROR'));
+    console.log(colorout('fg.red', 'AXIOS ERROR'));
     console.log(colorout('fg.red', 'MESSAGE'));
     console.log(error.message);
     console.log(colorout('fg.red', 'ERROR'));
@@ -82,7 +82,7 @@ export default async function HandleError({
 
   } else if (error instanceof Error) {
 
-    console.error(colorout('fg.red', 'INSTANCE ERROR'));
+    console.log(colorout('fg.red', 'INSTANCE ERROR'));
     console.log(colorout('fg.red', 'MESSAGE'));
     console.log(error.message);
     console.log(colorout('fg.red', 'ERROR'));
@@ -106,7 +106,7 @@ export default async function HandleError({
 
   } else {
 
-    console.error(colorout('fg.red', 'ANY ERROR'));
+    console.log(colorout('fg.red', 'ANY ERROR'));
     console.log(colorout('fg.red', 'ERROR'));
     console.log(error);
 

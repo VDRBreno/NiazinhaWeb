@@ -9,14 +9,19 @@ interface CustomButtonProps {
   props?: ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
-export default function Button(props: CustomButtonProps) {
+export default function Button({
+  children,
+  onClick,
+  props
+}: CustomButtonProps) {
   return (
     <button
-      {...props.props}
+      {...props}
       id={styles.Container}
-      className={`${props.props && props.props.disabled ?styles.ContainerDisabled :''}`}
+      className={`${props && props.disabled ?styles.ContainerDisabled :''}`}
+      onClick={onClick}
     >
-      {props.children}
+      {children}
     </button>
   );
 }

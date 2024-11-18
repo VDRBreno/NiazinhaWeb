@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
+import { FiChevronDown } from 'react-icons/fi'; 
+
 import styles from './styles.module.scss';
-import { FiChevronDown } from 'react-icons/fi';
 
 interface DropdownProps {
   options: IOption[];
@@ -11,7 +12,7 @@ interface DropdownProps {
     side: 'left' | 'right';
     element: JSX.Element;
   };
-  optionsSide?: 'left' | 'right';
+  contentSide?: 'left' | 'right';
 }
 
 export interface IOption {
@@ -24,14 +25,14 @@ export default function Dropdown({
   onChange,
   defaultValueId,
   elementOnPreview,
-  optionsSide='left'
+  contentSide='left'
 }: DropdownProps) {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(defaultValueId ?getOption(defaultValueId) :options[0]);
 
   function getOption(id: string) {
-    return options.filter(option => option.id)[0];
+    return options.filter(option => option.id===id)[0];
   }
 
   function toggleDropdownState() {
@@ -62,10 +63,16 @@ export default function Dropdown({
       </div>
 
       {isDropdownOpen ? (
-        <div className={styles.Options}>
-          {/* {options.map(option => (
-
-          ))} */}
+        <div className={styles.Options} style={{ [contentSide]: 0 }}>
+          {options.map(option => (
+            <div
+              className={`${styles.Option} ${option.id===selectedValue.id ?styles.OptionSelected :''}`}
+              key={option.id}
+              onClick={() => changeDropdownSelectedValue(option)}
+            >
+              {option.value}
+            </div>
+          ))}
         </div>
       ) :null}
     </div>

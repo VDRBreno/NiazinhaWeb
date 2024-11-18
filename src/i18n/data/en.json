@@ -5,5 +5,11 @@
   "ErrorScreen.MessageTitle": "Message",
   "ErrorScreen.ErrorTitle": "Error",
 
+  "Sidemenu.Nav.WarpHistoryPage": "Warp History",
+  "Sidemenu.Nav.BannersHistoryPage": "Banners History",
+  "Sidemenu.Nav.CharactersPage": "Characters",
+  "Sidemenu.Nav.LightConesPage": "Light Cones",
+  "Sidemenu.Nav.RelicsPage": "Relics",
+
   "Home.Title": "Teste"
 }

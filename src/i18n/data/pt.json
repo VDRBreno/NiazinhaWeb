@@ -4,5 +4,11 @@
   "ErrorScreen.MessageTitle": "Mensagem",
   "ErrorScreen.ErrorTitle": "Erro",
 
+  "Sidemenu.Nav.WarpHistoryPage": "Histórico de Saltos",
+  "Sidemenu.Nav.BannersHistoryPage": "Histórico de Banners",
+  "Sidemenu.Nav.CharactersPage": "Personagens",
+  "Sidemenu.Nav.LightConesPage": "Cones de Luz",
+  "Sidemenu.Nav.RelicsPage": "Relíquias",
+
   "Home.Title": "PT TEST"
 }

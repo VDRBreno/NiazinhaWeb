@@ -1,0 +1,29 @@
+#Container {
+  & {
+    display: flex;
+    padding: 10px 15px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #20152C;
+    background-color: #20152C;
+    transition: border-color .35s;
+  
+    & > input {
+      display: flex;
+      width: 100%;
+      background: none;
+      border: none;
+      color: #FFFFFF;
+      font-size: 1.3rem;
+      font-weight: 500;
+  
+      &:focus {
+        outline: none;
+      }
+  
+      &::placeholder {
+        color: #71607D;
+      }
+    }
+  }
+}

@@ -59,7 +59,6 @@ export default function LangProvider({
       return;
     }
     
-
     setLang(await getLang(langKey));
     if(langKey!==LangKey)
       setLangKey(langKey);

@@ -1,11 +1,11 @@
-import { HTMLAttributes } from 'react';
+import { InputHTMLAttributes } from 'react';
 
 import styles from './styles.module.scss';
 
 interface InputProps {
   value: string | number;
   onChange: (value: string) => void;
-  props?: HTMLAttributes<HTMLInputElement>;
+  props?: InputHTMLAttributes<HTMLInputElement>;
   containerStyle?: React.CSSProperties;
 }
 

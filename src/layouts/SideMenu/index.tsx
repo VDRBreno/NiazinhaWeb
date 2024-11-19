@@ -54,56 +54,56 @@ export default function SideMenu({
             }}
           />
         </div>
-        <Button props={{ 'aria-label': 'Close side menu' }} onClick={toggleSideMenuState}>
+        <Button props={{ 'aria-label': Lang['SideMenu.Button.CloseSideMenu.AriaLabel'] }} onClick={toggleSideMenuState}>
           <FiX size={25} color='#FFFFFF' />
         </Button>
       </div>
 
       <div className={styles.NavContainer}>
-        <Link to={`/${LangKey}/discord`} target='_blank'>
-          <Button props={{ 'aria-label': 'Open Discord', style: { backgroundColor: '#5865F2', height: 'auto' } }}>
+        <Link to={`/${LangKey}/discord`} target='_blank' aria-label={Lang['SideMenu.Link.NavigateToDiscordPage.AriaLabel']}>
+          <Button props={{ style: { backgroundColor: '#5865F2', height: 'auto' } }}>
             <img src={DiscordLogo} alt='Discord logo' width={23} />
             <span style={{ fontWeight: '700' }}>Discord</span>
           </Button>
         </Link>
       </div>
       <div className={styles.NavContainer}>
-        <Link to={`/${LangKey}/warp`}>
+        <Link to={`/${LangKey}/warp`} aria-label={Lang['SideMenu.Link.NavigateToWarpPage.AriaLabel']}>
           <div className={styles.NavOption}>
             <img className={styles.NavIcon} src={WarpIcon} alt='Warp history icon' />
-            <span className={styles.NavText}>{Lang['Sidemenu.Nav.WarpHistoryPage']}</span>
+            <span className={styles.NavText}>{Lang['SideMenu.Nav.WarpHistoryPage']}</span>
           </div>
         </Link>
       </div>
       <div className={styles.NavContainer}>
-        <Link to={`/${LangKey}/banners-history`}>
+        <Link to={`/${LangKey}/banners-history`} aria-label={Lang['SideMenu.Link.NavigateToBannersHistoryPage.AriaLabel']}>
           <div className={styles.NavOption}>
             <img className={styles.NavIcon} src={BannersHistoryIcon} alt='Banners history icon' />
-            <span className={styles.NavText}>{Lang['Sidemenu.Nav.BannersHistoryPage']}</span>
+            <span className={styles.NavText}>{Lang['SideMenu.Nav.BannersHistoryPage']}</span>
           </div>
         </Link>
       </div>
       <div className={styles.NavContainer}>
-        <Link to={`/${LangKey}/characters`}>
+        <Link to={`/${LangKey}/characters`} aria-label={Lang['SideMenu.Link.NavigateToCharactersPage.AriaLabel']}>
           <div className={styles.NavOption}>
             <img className={styles.NavIcon} src={CharactersIcon} alt='Characters icon' />
-            <span className={styles.NavText}>{Lang['Sidemenu.Nav.CharactersPage']}</span>
+            <span className={styles.NavText}>{Lang['SideMenu.Nav.CharactersPage']}</span>
           </div>
         </Link>
       </div>
       <div className={styles.NavContainer}>
-        <Link to={`/${LangKey}/light-cones`}>
+        <Link to={`/${LangKey}/light-cones`} aria-label={Lang['SideMenu.Link.NavigateToLightConesPage.AriaLabel']}>
           <div className={styles.NavOption}>
             <img className={styles.NavIcon} src={LightConesIcon} alt='Light cones icon' />
-            <span className={styles.NavText}>{Lang['Sidemenu.Nav.LightConesPage']}</span>
+            <span className={styles.NavText}>{Lang['SideMenu.Nav.LightConesPage']}</span>
           </div>
         </Link>
       </div>
       <div className={styles.NavContainer}>
-        <Link to={`/${LangKey}/relics`}>
+        <Link to={`/${LangKey}/relics`} aria-label={Lang['SideMenu.Link.NavigateToRelicsPage.AriaLabel']}>
           <div className={styles.NavOption}>
             <img className={styles.NavIcon} src={RelicIcon} alt='Relics icon' />
-            <span className={styles.NavText}>{Lang['Sidemenu.Nav.RelicsPage']}</span>
+            <span className={styles.NavText}>{Lang['SideMenu.Nav.RelicsPage']}</span>
           </div>
         </Link>
       </div>

@@ -12,7 +12,7 @@ import styles from './styles.module.scss';
 
 export default function Header() {
   
-  const { LangKey } = useLang();
+  const { Lang, LangKey } = useLang();
 
   const headerHeight = 150;
   const headerFixedStateOffset = 30;
@@ -52,13 +52,13 @@ export default function Header() {
     <div style={{ minHeight: headerHeight }} />
 
     <div id={styles.Container} className={`${showFixedHeader ?styles.ContainerSticky :''}`}>
-      <Link to={`/${LangKey}/`}>
+      <Link to={`/${LangKey}/`} aria-label={Lang['Header.Link.NavigateToHomePage.AriaLabel']}>
         <img className={styles.Logo} src={NiazinhaLogo} alt='Niazinha logo' />
       </Link>
 
       <div className={styles.InLine}>
         <Button
-          props={{ "aria-label": 'Open side menu', style: { background: 'none' } }}
+          props={{ "aria-label": Lang['Header.Button.OpenSideMenu.AriaLabel'], style: { background: 'none' } }}
           onClick={toggleSideMenuState}
         >
           <FiMenu size={25} color='#FFFFFF' />

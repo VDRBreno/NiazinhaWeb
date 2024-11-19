@@ -2,14 +2,23 @@
   "LangKey": "en",
 
   "ErrorScreen.Title": "Sorry for what happened, an unknown error occurred, you can report that on our Discord Server",
+  "ErrorScreen.Link.NavigateToDiscordPage.AriaLabel": "Go to Discord page",
   "ErrorScreen.MessageTitle": "Message",
   "ErrorScreen.ErrorTitle": "Error",
 
-  "Sidemenu.Nav.WarpHistoryPage": "Warp History",
-  "Sidemenu.Nav.BannersHistoryPage": "Banners History",
-  "Sidemenu.Nav.CharactersPage": "Characters",
-  "Sidemenu.Nav.LightConesPage": "Light Cones",
-  "Sidemenu.Nav.RelicsPage": "Relics",
+  "Header.Link.NavigateToHomePage.AriaLabel": "Go to home page",
+  "Header.Button.OpenSideMenu.AriaLabel": "Open side menu",
 
-  "Home.Title": "Teste"
+  "SideMenu.Button.CloseSideMenu.AriaLabel": "Close side menu",
+  "SideMenu.Link.NavigateToDiscordPage.AriaLabel": "Open Discord",
+  "SideMenu.Link.NavigateToWarpPage.AriaLabel": "Go to Warp history page",
+  "SideMenu.Nav.WarpHistoryPage": "Warp History",
+  "SideMenu.Link.NavigateToBannersHistoryPage.AriaLabel": "Go to Banners history page",
+  "SideMenu.Nav.BannersHistoryPage": "Banners History",
+  "SideMenu.Link.NavigateToCharactersPage.AriaLabel": "Go to Characters page",
+  "SideMenu.Nav.CharactersPage": "Characters",
+  "SideMenu.Link.NavigateToLightConesPage.AriaLabel": "Go to Light cones page",
+  "SideMenu.Nav.LightConesPage": "Light Cones",
+  "SideMenu.Link.NavigateToRelicsPage.AriaLabel": "Go to Relics page",
+  "SideMenu.Nav.RelicsPage": "Relics"
 }

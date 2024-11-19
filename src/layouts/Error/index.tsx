@@ -76,8 +76,8 @@ export default function ErrorScreen({
   return (
     <div id={styles.Container}>
       <span className={styles.Title}>{Lang['ErrorScreen.Title']}</span>
-      <a href={`/${LangKey}/discord`} target='_blank'>
-        <Button props={{ 'aria-label': 'Open Discord', style: { gap: '7px', backgroundColor: '#5865F2' } }}>
+      <a href={`/${LangKey}/discord`} target='_blank' aria-label={Lang['ErrorScreen.Link.NavigateToDiscordPage.AriaLabel']}>
+        <Button props={{ style: { gap: '7px', backgroundColor: '#5865F2' } }}>
           <img src={DiscordLogo} alt='Discord logo' width={23} />
           <span style={{ fontWeight: '700' }}>Discord</span>
         </Button>

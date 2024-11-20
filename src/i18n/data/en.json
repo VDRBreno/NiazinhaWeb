@@ -1,6 +1,16 @@
 {
   "LangKey": "en",
 
+  "FavoriteProfile.Button.OpenFavoriteModal.AriaLabel": "Open modal dialog of favorite profile",
+  "FavoriteProfile.Link.NavigateToUserPage.AriaLabel": "Go to user page",
+
+  "ModalContents.ModalEditFavoriteProfile.Toast.MaxNicknameLength": "You cannot set a nickname with more than 25 letters",
+  "ModalContents.ModalEditFavoriteProfile.Input.Nickname.Placeholder": "Nickname",
+  "ModalContents.ModalEditFavoriteProfile.Button.RemoveFavoriteProfile.AriaLabel": "Remove profile from favorites",
+  "ModalContents.ModalEditFavoriteProfile.Button.RemoveFavoriteProfile": "Remove",
+  "ModalContents.ModalEditFavoriteProfile.Button.UpdateFavoriteProfile.AriaLabel": "Update favorite profile",
+  "ModalContents.ModalEditFavoriteProfile.Button.UpdateFavoriteProfile": "Update",
+
   "ErrorScreen.Title": "Sorry for what happened, an unknown error occurred, you can report that on our Discord Server",
   "ErrorScreen.Link.NavigateToDiscordPage.AriaLabel": "Go to Discord page",
   "ErrorScreen.MessageTitle": "Message",
@@ -20,5 +30,11 @@
   "SideMenu.Link.NavigateToLightConesPage.AriaLabel": "Go to Light cones page",
   "SideMenu.Nav.LightConesPage": "Light Cones",
   "SideMenu.Link.NavigateToRelicsPage.AriaLabel": "Go to Relics page",
-  "SideMenu.Nav.RelicsPage": "Relics"
+  "SideMenu.Nav.RelicsPage": "Relics",
+
+  "Modal.Button.CloseModal.AriaLabel": "Close modal dialog",
+
+  "Home.BuildCard.Title": "Create Star Rail cards!",
+  "Home.BuildCard.CardsDesignLink": "Saved card models",
+  "Home.FavoritesProfiles.Title": "Favorites"
 }

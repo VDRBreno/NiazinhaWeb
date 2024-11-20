@@ -1,0 +1,74 @@
+#Container {
+  & {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  
+    min-width: 200px;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #261036;
+    border: 1px solid #4D0186;
+    border-radius: 7px;
+    position: relative;
+  
+    & > a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      transition: filter .2s;
+  
+      &:hover {
+        cursor: pointer;
+        filter: brightness(80%);
+      }
+    }
+  }
+
+  .EditButtonContainer {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    z-index: 1;
+  }
+
+  .Avatar {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 999px;
+    border: 2px solid #4D0186;
+    background-color: #D7C5E5;
+  }
+
+  .InfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex-grow: 100;
+  }
+
+  .UID {
+    font-weight: 400;
+    font-size: 0.6rem;
+  }
+
+  .Name {
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  
+  .InLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .Nickname {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #8F75A7;
+  }
+}

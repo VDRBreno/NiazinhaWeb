@@ -1,0 +1,1 @@
+export const MihomoResourceURL = 'https://raw.githubusercontent.com/VDRBreno/StarRailRes/master/';

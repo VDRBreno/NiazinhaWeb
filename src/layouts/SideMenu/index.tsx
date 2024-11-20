@@ -9,7 +9,7 @@ import DiscordLogo from '@/assets/svg/discord_logo.svg';
 import WarpIcon from '@/assets/svg/warp_icon.svg';
 import BannersHistoryIcon from '@/assets/svg/banners_history_icon.svg';
 import CharactersIcon from '@/assets/svg/characters_icon.svg';
-import LightConesIcon from '@/assets/svg/light_cones_icon.svg';
+import LightConeIcon from '@/assets/svg/light_cone_icon.svg';
 import RelicIcon from '@/assets/svg/relic_icon.svg';
 
 import styles from './styles.module.scss';
@@ -94,7 +94,7 @@ export default function SideMenu({
       <div className={styles.NavContainer}>
         <Link to={`/${LangKey}/light-cones`} aria-label={Lang['SideMenu.Link.NavigateToLightConesPage.AriaLabel']}>
           <div className={styles.NavOption}>
-            <img className={styles.NavIcon} src={LightConesIcon} alt='Light cones icon' />
+            <img className={styles.NavIcon} src={LightConeIcon} alt='Light cones icon' />
             <span className={styles.NavText}>{Lang['SideMenu.Nav.LightConesPage']}</span>
           </div>
         </Link>

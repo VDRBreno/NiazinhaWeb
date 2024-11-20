@@ -32,9 +32,18 @@
   "SideMenu.Link.NavigateToRelicsPage.AriaLabel": "Go to Relics page",
   "SideMenu.Nav.RelicsPage": "Relics",
 
+  "Footer.NoRelations": "Niazinha has no relationship with miHoYo, Honkai or related brands & All games content and assets are trademarks and copyrights of miHoYo",
+  "Footer.Link.NavigateToPrivacyPolicyPage.AriaLabel": "Go to privacy policy page",
+  "Footer.Privacy": "Privacy Policy",
+  "Footer.Links": "Links",
+  "Footer.Link.NavigateToModelBuildCards.AriaLabel": "Go to saved model cards",
+  "Footer.ModelBuildCards": "Model cards",
+
   "Modal.Button.CloseModal.AriaLabel": "Close modal dialog",
 
   "Home.BuildCard.Title": "Create Star Rail cards!",
   "Home.BuildCard.CardsDesignLink": "Saved card models",
-  "Home.FavoritesProfiles.Title": "Favorites"
+  "Home.FavoritesProfiles.Title": "Favorites",
+  "Home.QA.1.Question": "Why is UID needed to generate the card?",
+  "Home.QA.1.Answer": "To fetch player data"
 }

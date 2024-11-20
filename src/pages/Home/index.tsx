@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FiCheck, FiExternalLink, FiStar } from 'react-icons/fi';
+import { toast } from 'react-toastify';
 
 import Header from '@/layouts/Header';
 import Footer from '@/layouts/Footer';
@@ -10,6 +11,8 @@ import useUserData from '@/hooks/useUserData';
 import Input from '@/components/Input';
 import Button from '@/components/Button';
 import FavoriteProfile from '@/components/FavoriteProfile';
+import validateUID from '@/utils/validateUID';
+import { toastStyle } from '@/styles/toastify';
 
 import HomeBuildCardsPreviewBackground from '@/assets/img/HomeBuildCardsPreviewBackground.webp';
 import HomeBuildCardPreview from '@/assets/img/HomeBuildCardPreview.webp';
@@ -32,12 +35,19 @@ export default function Home() {
   const { getLastUIDSearched, getFavoritesProfiles } = useUserData();
   const lastUIDSearched = getLastUIDSearched();
   const favoritesProfiles = getFavoritesProfiles();
+  const navigate = useNavigate();
 
   const [UID, setUID] = useState('');
 
   function navigateToUserPage(e?: React.FormEvent<HTMLFormElement>) {
     e?.preventDefault();
 
+    if(!validateUID(UID)) {
+      toast.error(Lang['Home.Toast.InvalidUID'], toastStyle.error);
+      return;
+    }
+
+    navigate(`/${LangKey}/user/${UID}`);
   }
 
   return (

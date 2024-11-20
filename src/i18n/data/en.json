@@ -41,6 +41,7 @@
 
   "Modal.Button.CloseModal.AriaLabel": "Close modal dialog",
 
+  "Home.Toast.InvalidUID": "Invalid UID",
   "Home.BuildCard.Title": "Create Star Rail cards!",
   "Home.BuildCard.CardsDesignLink": "Saved card models",
   "Home.FavoritesProfiles.Title": "Favorites",

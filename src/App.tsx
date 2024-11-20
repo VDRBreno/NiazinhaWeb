@@ -5,6 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import '@/styles/global.scss';
 import { toastOptions } from '@/styles/toastify';
 import LangProvider from '@/contexts/LangContext';
+import ModalProvider from '@/contexts/ModalContext';
 import ErrorScreen from '@/layouts/Error';
 import HandleError from '@/utils/HandleError';
 
@@ -16,7 +17,9 @@ function App() {
       <ToastContainer {...toastOptions} />
       <LangProvider>
         <ErrorBoundary FallbackComponent={props => <ErrorScreen error={props.error} />} onError={error => HandleError({ error })}>
-          <Router />
+          <ModalProvider>
+            <Router />
+          </ModalProvider>
         </ErrorBoundary>
       </LangProvider>
     </>
